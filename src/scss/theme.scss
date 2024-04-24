@@ -1,0 +1,64 @@
+/*!------------------------------------------------------------------
+[MAIN STYLESHEET]
+PROJECT:	JACKCREATIVE
+-------------------------------------------------------------------*/
+/* ====== index =====
+1.  Default Styles
+2.  Button Styles
+3.  Grid Styles
+4.  Navbar Styles
+5.  Hero Section Styles 
+6.  Work_area Section Styles
+7.  Counter Up Section Styles 
+8.  Properties Section Styles
+9.  Feature Section Styles
+10. Testimonial Section Styles
+11. Services Section Styles
+12. Blog Page Styles
+13. CTA Section Styles
+14. About Page Styles
+15. Company Page Styles
+16. Team Section Styles
+17. Listing Page Styles
+18. Agents Page Styles
+19. Property Details Page Styles
+20. Pagination Section Styles
+21. 404 Page Styles
+22. Contact Form Styles
+23. Privacy Page Styles
+24. Modals Styles
+25. Search Page Styles
+26. Footer Styles
+
+
+===================== */
+
+@import 'variables';
+@import 'mixins';
+@import 'root';
+@import 'buttons';
+@import 'grid';
+//Theme Components
+@import 'components/navbar';
+@import 'components/hero';
+@import 'components/work_area';
+@import 'components/counter';
+@import 'components/properties';
+@import 'components/feature';
+@import 'components/testimonial';
+@import 'components/services';
+@import 'components/blog';
+@import 'components/cta';
+@import 'components/about';
+@import 'components/company';
+@import 'components/team';
+@import 'components/listing';
+@import 'components/agents';
+@import 'components/property-details';
+@import 'components/pagination';
+@import 'components/404';
+@import 'components/contact-form';
+@import 'components/privacy';
+@import 'components/modal';
+@import 'components/search';
+@import 'components/footer';

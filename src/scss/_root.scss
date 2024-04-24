@@ -1,0 +1,315 @@
+/********** 
+ 1. Default  Styles 
+**********/
+@use 'sass:math';
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+.row {
+  @include media-breakpoint-up-sm {
+    --bs-gutter-x: 1.75rem;
+  }
+}
+/*Font */
+
+body {
+  font-family: $font-primary;
+  font-size: $base-font-size;
+  color: $color-text;
+  background: $color-white;
+  line-height: $paragraph-line-height;
+  font-weight: $normal-font-weight;
+  font-style: normal;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  color: $color-header;
+  font-family: $font-primary;
+  font-size: $base-font-size * 2.125;
+  font-weight: $extBold-font-weight;
+  line-height: $header-line-height;
+  letter-spacing: $base-letter-spacing;
+  @include media-breakpoint-up-lg {
+    font-size: $base-font-size * 2.5;
+  }
+  @include media-breakpoint-up-xxl {
+    font-size: $base-font-size * 2.875;
+  }
+  @include media-breakpoint-up-4k {
+    font-size: $base-font-size * 3.375;
+  }
+}
+
+h2 {
+  color: $color-header;
+  font-family: $font-primary;
+  font-size: $base-font-size * 2.875;
+  font-weight: $extBold-font-weight;
+  line-height: $header-line-height;
+  letter-spacing: $base-letter-spacing;
+  @include media-breakpoint-down-md {
+    font-size: $base-font-size * 1.875;
+  }
+}
+h3 {
+  color: $color-header;
+  font-family: $font-primary;
+  font-size: $base-font-size * 2.25;
+  font-weight: $extBold-font-weight;
+  line-height: $header-line-height;
+  letter-spacing: $base-letter-spacing;
+  @include media-breakpoint-down-md {
+    font-size: $base-font-size * 1.75;
+  }
+}
+h4 {
+  color: $color-header;
+  font-family: $font-primary;
+  font-size: $base-font-size * 1.5;
+  font-weight: $extBold-font-weight;
+  line-height: $header-line-height;
+  letter-spacing: $base-letter-spacing;
+  @include media-breakpoint-down-md {
+    font-size: $base-font-size * 1.25;
+  }
+}
+h5 {
+  color: $color-header;
+  font-family: $font-primary;
+  font-size: $base-font-size * 1.25;
+  font-weight: $bold-font-weight;
+  line-height: $header-line-height;
+  letter-spacing: $zero-letter-spacing;
+  @include media-breakpoint-up-4k {
+    font-size: $base-font-size * 1.5;
+  }
+}
+
+h6 {
+  font-size: $base-font-size * 1.375;
+}
+p {
+  font-size: $base-font-size * 1.125;
+  color: $color-text;
+  line-height: $paragraph-line-height;
+  font-weight: $normal-font-weight;
+  &.bold {
+    font-size: $base-font-size * 1.25;
+    line-height: $header-line-height;
+    font-weight: $semiBold-font-weight;
+  }
+}
+a {
+  color: $color-primary;
+  display: inline-block;
+  font-weight: $bold-font-weight;
+  font-size: 18px;
+  line-height: 100%;
+  text-decoration: none;
+  transition: $base-transition;
+  span,
+  i {
+    transition: $base-transition;
+  }
+  &:hover {
+    color: $color-primary-light;
+    span,
+    i {
+      color: $color-primary-light;
+    }
+  }
+}
+//Tags
+.tag {
+  display: flex;
+  border: 1px solid $color-primary-lightest;
+  border-radius: $base-border-radius;
+  padding: 7px 10px;
+  align-items: center;
+  font-size: $base-font-size * 0.875;
+  line-height: 1.6;
+  font-weight: $semiBold-font-weight;
+  margin-right: $base-margin * 0.75;
+  &:last-child {
+    margin-right: 0;
+  }
+  .types {
+    color: $color-primary-lighter;
+    margin-right: 6px;
+  }
+  .quantity {
+    color: $color-header;
+    margin-right: 14px;
+  }
+  i {
+    color: $color-header;
+    font-size: $base-font-size;
+    cursor: pointer;
+  }
+  &.alert {
+    margin-bottom: 0;
+  }
+}
+/********** 
+   Custom Styles 
+**********/
+.w-md-auto {
+  width: auto !important;
+}
+.gutter-5 {
+  --bs-gutter-y: 60px;
+}
+.gutter-2 {
+  --bs-gutter-y: 20px;
+}
+.grid-col-span-2 {
+  grid-column: span 2;
+}
+.review-stars {
+  margin-bottom: $base-margin * 1.25;
+  @include media-breakpoint-down-sm {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+  ul {
+    margin-right: $base-margin;
+    line-height: 1;
+    @include media-breakpoint-down-sm {
+      margin-bottom: $base-margin * 0.75 !important;
+    }
+  }
+  span {
+    font-weight: $semiBold-font-weight;
+    font-size: $base-font-size;
+    line-height: 1;
+  }
+  .list-inline-item:not(:last-child) {
+    margin-right: $base-margin * 0;
+  }
+  li {
+    svg {
+      path {
+        stroke: $color-primary;
+      }
+    }
+    &.active {
+      svg {
+        path {
+          fill: $color-primary;
+        }
+      }
+    }
+  }
+}
+
+/* Tooltip*/
+.tooltip {
+  &.bs-tooltip-start {
+    .tooltip-arrow {
+      &::before {
+        border-left-color: $color-primary-lightest !important;
+      }
+    }
+  }
+  &.bs-tooltip-top {
+    .tooltip-arrow {
+      &::before {
+        border-top-color: $color-primary-lightest !important;
+      }
+    }
+  }
+  &.bs-tooltip-end {
+    .tooltip-arrow {
+      &::before {
+        border-right-color: $color-primary-lightest !important;
+      }
+    }
+  }
+  &.bs-tooltip-bottom {
+    .tooltip-arrow {
+      &::before {
+        border-bottom-color: $color-primary-lightest !important;
+      }
+    }
+  }
+
+  &-inner {
+    background: $color-primary-lightest;
+    color: $color-header;
+    font-weight: $semiBold-font-weight;
+    font-size: $base-font-size;
+  }
+}
+// checkbox
+.form-check-input {
+  width: 18px;
+  height: 18px;
+  margin-top: 8px;
+  border: 2px solid $color-header;
+  border-radius: 4px;
+  &:checked {
+    background-color: $color-primary;
+    border: 2px solid $color-header;
+    box-shadow: 0 0 0 0 rgba(0, 0, 110, 0);
+  }
+}
+.form-check-label {
+  font-weight: $bold-font-weight;
+  font-size: $base-font-size * 1.125;
+  color: $color-header;
+}
+/* Prism button style */
+div.code-toolbar > .toolbar a,
+div.code-toolbar > .toolbar button {
+  background-color: $color-primary;
+  border-width: 0;
+  border-radius: $button-border-radius;
+  padding: $base-padding $base-padding * 1.5;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 0px 0 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: $color-primary-light;
+    border-radius: $button-border-radius;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
+  }
+  &:hover {
+    &:after {
+      transform: scaleX(1);
+      transform-origin: left;
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+}
+div.code-toolbar > .toolbar span {
+  font-family: $font-primary;
+  font-weight: $semiBold-font-weight;
+  font-size: $base-font-size;
+  line-height: 1;
+  color: $color-white;
+  background-color: transparent;
+  border-width: 0;
+  border-radius: 0;
+  padding: 0;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 0px 0 0 rgba(0, 0, 0, 0.2);
+}
+pre[class*='language-'] {
+  border-radius: $base-border-radius;
+}
+:not(pre) > code[class*='language-'],
+pre[class*='language-'] {
+  background: $color-white;
+}

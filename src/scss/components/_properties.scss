@@ -1,0 +1,134 @@
+/********** 
+ 8. Properties Section Styles
+**********/
+.properties {
+  margin-bottom: $base-margin * 6.25;
+  &-header {
+    a {
+      color: $color-primary-lighter;
+      text-decoration: none;
+      span {
+        display: inline-block;
+        margin-right: $base-margin * 0.5;
+      }
+      svg {
+        transition: $base-transition;
+        transform: translateX(0);
+      }
+      &:hover {
+        svg {
+          transform: translateX(5px);
+          transition: $base-transition;
+        }
+      }
+    }
+  }
+  &-filter {
+    margin-top: $base-margin * 1.5;
+    margin-bottom: $base-margin * 3.75;
+    button {
+      border: none;
+      font-weight: $bold-font-weight;
+      font-size: $base-font-size * 1.125;
+      line-height: 1;
+      color: $color-primary-lighter;
+      margin-right: $base-margin * 1.875;
+      background: transparent;
+      padding: 0;
+      &:last-child {
+        margin-right: 0;
+      }
+      &:focus {
+        outline: 0;
+      }
+      &.is-checked {
+        color: $color-header;
+      }
+      @include media-breakpoint-down-lg {
+        font-size: $base-font-size;
+        margin-right: $base-margin * 1.25;
+      }
+    }
+  }
+  &-card {
+    &:hover {
+      transform: translateY(-5px);
+      transition: all 0.3s ease-in-out;
+      .properties-card--thumb img {
+        transform: scale(1.05);
+        transition: $base-transition;
+      }
+    }
+    &--thumb {
+      overflow: hidden;
+      border-radius: $base-border-radius $base-border-radius 0 0;
+      img {
+        width: 100%;
+        max-width: 100%;
+        object-fit: cover;
+        object-position: center;
+        transition: $base-transition;
+      }
+    }
+    &--content {
+      border: 1px solid #c7e6f4;
+      border-radius: 0 0 $base-border-radius $base-border-radius;
+      padding: $base-padding * 1.875 $base-padding * 2.5 $base-padding * 1.875
+        $base-padding * 1.25;
+      background: $color-lighter;
+      &--address {
+        margin-bottom: $base-margin * 1.5;
+        span {
+          font-size: 1rem;
+          font-weight: $normal-font-weight;
+          display: inline-block;
+          margin-left: $base-margin;
+          color: $color-primary-light;
+          @include media-breakpoint-down-xxl {
+            margin-left: $base-margin * 0.5;
+          }
+        }
+      }
+
+      &--title {
+        a {
+          font-size: 20px;
+          font-weight: 900;
+          margin-bottom: $base-margin * 0.75;
+        }
+      }
+      &--features {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-bottom: $base-margin * 1.5;
+        span {
+          font-weight: $semiBold-font-weight;
+          display: inline-block;
+          margin-left: $base-margin;
+          @include media-breakpoint-down-xxl {
+            margin-left: $base-margin * 0.5;
+          }
+        }
+        @include media-breakpoint-down-xxl {
+          gap: 10px;
+        }
+      }
+      @include media-breakpoint-down-xxl {
+        padding: $base-padding * 1.875 $base-padding * 1.875 $base-padding *
+          1.875 $base-padding * 1.25;
+      }
+    }
+  }
+  .btn-mobile {
+    margin-top: $base-margin * 1.5;
+    max-width: 160px;
+    text-align: center;
+  }
+  &-related {
+    margin-top: $base-margin * 1.25;
+    .properties-header {
+      margin-bottom: $base-margin * 2.5;
+    }
+  }
+}

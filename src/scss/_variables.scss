@@ -1,0 +1,47 @@
+// Font Variables
+$font-primary: var(--font-manrope);
+$base-font-size: 1rem;
+$extBold-font-weight: 800;
+$bold-font-weight: 700;
+$semiBold-font-weight: 600;
+$medium-font-weight: 500;
+$normal-font-weight: 400;
+$light-font-weight: 300;
+$header-line-height: 1.4;
+$paragraph-line-height: 1.8;
+$base-letter-spacing: -0.02em;
+$zero-letter-spacing: 0;
+
+//Colors
+$color-body: #e5e5e5;
+$color-white: #fff;
+$color-black: #000;
+$color-light: #c7e6f4;
+$color-lighter: #f9fdff;
+$color-primary: #1c4456;
+$color-primary-light: #417086;
+$color-primary-lighter: #5d8a9e;
+$color-primary-lightest: #96bcce;
+$color-danger: #ff5555;
+$color-warning: #fff8f8;
+$color-blue: #00adf7;
+
+$color-header: #1c4456;
+$color-text: #417086;
+
+// Spacer Variables
+$base-padding: 1rem;
+$base-margin: 1rem;
+
+// Transition Variables
+$base-transition: all 0.3s ease-in-out;
+
+//Borders
+$base-border-width: 1px;
+$base-border-radius: 10px;
+$button-border-radius: 10px;
+
+//Shadows
+$large-box-shadow: 0px 30px 60px rgba(19, 52, 68, 0.2);
+$medium-box-shadow: 0px 30px 30px rgba(146, 174, 187, 0.2);
+$base-box-shadow: 0px 9px 20px rgba(28, 68, 86, 0.2);

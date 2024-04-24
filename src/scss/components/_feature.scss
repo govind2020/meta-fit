@@ -1,0 +1,107 @@
+/********** 
+ 9. feature Section Styles
+**********/
+.feature {
+  background: #f5fcff;
+  padding-top: $base-padding * 7.5;
+  padding-bottom: $base-padding * 7.5;
+  &-top {
+    margin-bottom: $base-margin * 9.375;
+    @include media-breakpoint-down-lg {
+      margin-bottom: $base-margin * 3;
+    }
+    @include media-breakpoint-down-md {
+      margin-bottom: $base-margin * 5;
+    }
+  }
+  &-bottom {
+    margin-bottom: $base-margin * 9.375;
+    @include media-breakpoint-down-lg {
+      margin-bottom: $base-margin * 3;
+    }
+    @include media-breakpoint-down-md {
+      margin-bottom: 0;
+    }
+    .feature-content {
+      p {
+        margin-bottom: $base-margin * 1.25;
+      }
+    }
+  }
+  &-content {
+    max-width: 460px;
+    @include media-breakpoint-down-xl {
+      max-width: 400px;
+    }
+    @include media-breakpoint-down-lg {
+      max-width: 100%;
+      margin-top: $base-margin * 3.875;
+    }
+    @include media-breakpoint-down-md {
+      max-width: 100%;
+      margin-top: $base-margin * 4.875;
+    }
+    h3 {
+      max-width: 350px;
+      margin-bottom: $base-margin * 1.25;
+      @include media-breakpoint-down-lg {
+        max-width: 100%;
+      }
+    }
+    p {
+      margin-bottom: $base-margin * 3.75;
+    }
+    ul {
+      padding-left: 0;
+      margin-bottom: $base-margin * 3.75;
+      li {
+        list-style-type: none;
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+        display: flex;
+        align-items: center;
+        svg {
+          flex-shrink: 0;
+        }
+        span {
+          font-weight: $semiBold-font-weight;
+          font-size: $base-font-size * 1.125;
+          line-height: 1;
+          margin-left: $base-margin * 0.875;
+        }
+      }
+    }
+    &-thumb {
+      position: relative;
+      max-width: 540px;
+      z-index: 1;
+      border-radius: $base-border-radius;
+      margin-left: $base-margin * 3.125;
+      img {
+        width: 100%;
+        max-width: 100%;
+        border-radius: $base-border-radius;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: -50px;
+        bottom: -50px;
+        background: #d3f1ff;
+        z-index: -1;
+        border-radius: $base-border-radius;
+      }
+    }
+  }
+  &-grid-image {
+    img {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: $base-margin;
+      border-radius: $base-border-radius;
+    }
+  }
+}

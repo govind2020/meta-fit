@@ -1,0 +1,56 @@
+/********** 
+ 13. CTA Section Styles
+**********/
+.cta {
+  margin-top: $base-margin * 7.5;
+  background: $color-light;
+  text-align: center;
+  padding: $base-padding * 2.5 $base-padding * 7;
+  border-radius: $base-border-radius;
+  @include media-breakpoint-only-xl {
+    padding: $base-padding * 2.5 $base-padding * 6;
+  }
+  @include media-breakpoint-down-xl {
+    padding: $base-padding * 2.5 $base-padding * 3;
+  }
+  h4 {
+    margin-bottom: $base-margin * 0.625;
+    @include media-breakpoint-down-lg {
+      font-size: $base-font-size * 1.75;
+    }
+  }
+  form {
+    .form-control {
+      width: auto;
+      display: inline-block;
+      min-width: 260px;
+      margin-right: $base-margin * 0.75;
+      height: 50px;
+      color: $color-primary-lighter;
+      font-size: $base-font-size * 0.875;
+      font-weight: $semiBold-font-weight;
+      border: 1px solid $color-lighter;
+      line-height: 1.6;
+      &:focus {
+        outline: 0;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+        border: 1px solid $color-primary;
+        background: $color-lighter;
+        border-radius: $base-border-radius;
+        color: $color-primary-lighter;
+      }
+      @include media-breakpoint-down-md {
+        margin-right: 0;
+        min-width: auto;
+        width: 100%;
+        margin-bottom: $base-margin * 0.75;
+      }
+    }
+    button {
+      flex-shrink: 0;
+      @include media-breakpoint-up-md {
+        width: auto !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+/********** 
+ 6. Work_area Section Styles
+**********/
+.work-area {
+  margin-bottom: $base-margin * 6.25;
+  &--card {
+    background: $color-light;
+    padding: $base-padding * 3.375 $base-padding * 7 $base-padding * 3.375
+      $base-padding * 3.125;
+    border-radius: $base-border-radius * 2;
+    height: 100%;
+    @include media-breakpoint-down-xl {
+      padding: $base-padding * 2.5 $base-padding * 4 $base-padding * 2.5
+        $base-padding * 2.5;
+    }
+    @include media-breakpoint-down-md {
+      padding: $base-padding * 2.5;
+    }
+    h3 {
+      margin-bottom: $base-margin;
+    }
+    p {
+      margin-bottom: $base-margin * 3.125;
+    }
+  }
+  &--service {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    &--items {
+      background: $color-lighter;
+      border: 1px solid $color-light;
+      padding: $base-padding * 1.5 $base-padding * 4 $base-padding * 2.75
+        $base-padding * 1.875;
+      border-radius: $base-border-radius * 2;
+      svg {
+        margin-bottom: $base-margin * 1.25;
+      }
+      @include media-breakpoint-down-md {
+        text-align: center;
+        padding: $base-padding;
+        min-width: 50%;
+      }
+    }
+  }
+}

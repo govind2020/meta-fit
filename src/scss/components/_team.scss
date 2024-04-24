@@ -1,0 +1,60 @@
+/********** 
+ 16. Team Section Styles
+**********/
+.team {
+  margin-top: $base-margin * 7.5;
+  margin-bottom: $base-margin * 7.5;
+  @include media-breakpoint-down-md {
+    margin-top: $base-margin * 3.75;
+    margin-bottom: $base-margin * 3.75;
+  }
+  .g-3 {
+    --bs-gutter-x: 1rem;
+  }
+  &-title {
+    margin-bottom: $base-margin * 3.75;
+  }
+  &-member {
+    &--thumb {
+      border-radius: $base-border-radius;
+      overflow: hidden;
+      margin-bottom: $base-margin;
+      @include media-breakpoint-down-md {
+        margin-bottom: $base-margin * 0.5;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    &--content {
+      h6 {
+        font-weight: $semiBold-font-weight;
+        font-size: $base-font-size * 1.25;
+        line-height: $header-line-height;
+        color: $color-header;
+        margin-bottom: 0;
+        @include media-breakpoint-down-md {
+          font-size: $base-font-size;
+        }
+      }
+      p {
+        margin-bottom: 0;
+        @include media-breakpoint-down-md {
+          font-size: $base-font-size * 0.875;
+        }
+      }
+    }
+  }
+  .next-team-member {
+    @include media-breakpoint-down-md {
+      display: none;
+    }
+  }
+  .load-more {
+    width: auto;
+    margin-top: $base-margin * 2.5;
+    @include media-breakpoint-down-md {
+      width: 100%;
+    }
+  }
+}

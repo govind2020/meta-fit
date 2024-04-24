@@ -1,0 +1,81 @@
+/********** 
+20. Pagination Section Styles
+**********/
+@use 'sass:math';
+.pagination {
+  margin-top: $base-margin * 4.5;
+  @include media-breakpoint-down-sm {
+    flex-wrap: wrap;
+  }
+  .page-item {
+    [disabled] {
+      cursor: no-drop;
+    }
+    .page-link {
+      border: 1px solid transparent;
+      border-radius: $base-border-radius;
+      margin-right: $base-margin * 0.25;
+      font-size: $base-font-size;
+      line-height: 1;
+      padding: $base-padding $base-padding * 1.25;
+      color: $color-header;
+      background: transparent;
+      transition: $base-transition;
+      font-weight: 700;
+      &:focus {
+        outline: 0;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+      }
+      svg {
+        color: $color-header;
+        vertical-align: middle;
+        transition: $base-transition;
+        margin-left: 5px;
+      }
+      &:hover {
+        svg {
+          transform: translateX(5px);
+          transition: $base-transition;
+        }
+      }
+    }
+    &.active {
+      .page-link {
+        border: 1px solid $color-primary-light;
+        border-radius: $base-border-radius;
+        margin-right: $base-margin * 0.25;
+        font-size: $base-font-size;
+        line-height: 1;
+        padding: $base-padding $base-padding * 1.25;
+        color: $color-header;
+        background: transparent;
+      }
+    }
+    &:hover {
+      .page-link {
+        border: 1px solid $color-primary-light;
+        border-radius: $base-border-radius;
+        margin-right: $base-margin * 0.25;
+        font-size: $base-font-size;
+        line-height: 1;
+        padding: $base-padding $base-padding * 1.25;
+        color: $color-header;
+        background: transparent;
+      }
+    }
+    &:first-child {
+      .page-link {
+        border-radius: $base-border-radius;
+      }
+    }
+    &:last-child {
+      margin-left: auto;
+      .page-link {
+        border: 1px solid $color-primary-light;
+        svg {
+          vertical-align: bottom !important;
+        }
+      }
+    }
+  }
+}

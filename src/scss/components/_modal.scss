@@ -1,0 +1,116 @@
+/********** 
+ 24. Modals Styles
+**********/
+/* Modal Style */
+.requestVisit {
+  .modal-dialog {
+    max-width: 600px;
+    margin: $base-margin * 2.75 auto;
+  }
+  .modal-header {
+    border-bottom: 0px solid #dee2e6;
+    padding: $base-padding * 1.875 $base-padding * 1.5 $base-padding * 0.5;
+    h4 {
+      margin-bottom: 0;
+    }
+  }
+  .modal-body {
+    padding: $base-padding $base-padding * 0.875 $base-padding * 1.5;
+  }
+}
+
+/* MODAL LOGIN */
+.modal {
+  padding-right: 0px !important;
+  z-index: 106000;
+  background-color: rgba($color: $color-primary, $alpha: 0.95);
+  @include media-breakpoint-down-sm {
+    overflow-y: auto;
+  }
+  &-content {
+    border-radius: $base-border-radius;
+  }
+  &-header {
+    border-bottom: 0px solid #dee2e6;
+    padding: $base-padding * 2.5 $base-padding * 1.75 $base-padding * 0.5;
+    border-radius: $base-border-radius $base-border-radius 0 0;
+    h4 {
+      margin-bottom: 0;
+    }
+  }
+  &-body {
+    padding: $base-padding $base-padding * 0.875 $base-padding * 2.5;
+    border-bottom: 1px solid $color-light;
+    .form-check-input {
+      width: 18px;
+      height: 18px;
+      margin-top: 8px;
+      border: 2px solid $color-header;
+      border-radius: 4px;
+      &:checked {
+        background-color: $color-primary;
+      }
+    }
+    .form-check-label {
+      font-weight: $bold-font-weight;
+      font-size: $base-font-size * 1.125;
+      color: $color-header;
+    }
+    .contact-form-button {
+      button {
+        i {
+          font-size: $base-font-size * 1.25;
+          &::before {
+            font-weight: $bold-font-weight;
+          }
+        }
+      }
+    }
+  }
+  &-footer {
+    padding-top: $base-padding * 1.5;
+    padding-bottom: $base-padding * 1.5;
+    border-radius: 0 0 $base-border-radius $base-border-radius;
+    border-top: 0px solid #dee2e6;
+  }
+  &-login {
+    .modal-dialog {
+      max-width: 500px;
+    }
+  }
+  &-createAccount {
+    .modal-dialog {
+      max-width: 700px;
+      @include media-breakpoint-down-sm {
+        margin: $base-margin * 4.75 auto;
+      }
+    }
+    .form-check-label {
+      font-weight: $bold-font-weight;
+      font-size: $base-font-size * 1.125;
+      color: $color-header;
+      span {
+        color: $color-primary-lighter;
+      }
+    }
+    .btn-large {
+      @include media-breakpoint-down-sm {
+        padding: $base-padding * 1.25 $base-padding;
+      }
+    }
+  }
+  &-resetPassword {
+    .modal-dialog {
+      max-width: 500px;
+    }
+  }
+  &-otp {
+    .modal-dialog {
+      max-width: 500px;
+    }
+    .form-control {
+      height: 50px;
+      padding: $base-padding * 0.5 $base-padding * 1.125;
+    }
+  }
+}

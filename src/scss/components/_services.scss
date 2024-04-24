@@ -1,0 +1,28 @@
+/********** 
+ 11. Services Section Styles
+**********/
+.service {
+  border-top: 1px solid $color-light;
+  padding-top: $base-padding * 7.5;
+  padding-bottom: $base-padding * 7.5;
+  &-top {
+    margin-bottom: $base-margin * 5;
+  }
+  &-title {
+    margin-bottom: $base-margin * 3.75;
+    p {
+      margin-bottom: 0;
+    }
+  }
+  &-card {
+    &--thumb {
+      width: 100%;
+      border-radius: $base-border-radius;
+      margin-bottom: $base-margin * 1.25;
+      img {
+        width: 100%;
+        border-radius: $base-border-radius;
+      }
+    }
+  }
+}

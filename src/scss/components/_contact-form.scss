@@ -1,0 +1,182 @@
+/********** 
+22. contact Form Styles
+**********/
+.contact {
+  background: #f5fcff;
+  padding-top: $base-padding * 9.375;
+  padding-bottom: $base-padding * 7.5;
+  &-title {
+    margin-bottom: $base-margin * 2.5;
+  }
+  &-social {
+    margin-top: $base-margin * 2.5;
+    .list-inline-item {
+      margin-right: $base-margin * 0.75;
+      a {
+        transition: $base-transition;
+        &:hover {
+          transform: translateY(-5px);
+          transition: $base-transition;
+        }
+      }
+    }
+  }
+  &-form {
+    background: $color-white;
+    border: 1px solid $color-light;
+    border-radius: $base-border-radius;
+    padding: $base-padding * 3.75 $base-padding * 3.75 $base-padding * 2.5
+      $base-padding * 3.125;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    @include media-breakpoint-down-lg {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    @include media-breakpoint-down-xl {
+      padding: $base-padding * 3.75 $base-padding * 3.125 $base-padding * 2.5
+        $base-padding * 3.125;
+    }
+    @include media-breakpoint-down-md {
+      padding: $base-padding * 1.875 $base-padding * 1.25;
+    }
+    &-layout {
+      grid-column: span 2;
+      border-right: 1px solid $color-light;
+      padding-right: $base-padding * 6.25;
+      @include media-breakpoint-down-xl {
+        padding-right: $base-padding * 3.25;
+      }
+      @include media-breakpoint-down-lg {
+        border-right: 0;
+        padding-right: 0;
+        border-bottom: 1px solid $color-light;
+        padding-bottom: $base-padding * 2.5;
+        margin-bottom: $base-margin * 2.5;
+      }
+      h4 {
+        margin-bottom: $base-margin * 1.25;
+      }
+    }
+    &-items {
+      .input-group {
+        margin-bottom: $base-margin * 0.75;
+        .form-control:not(textarea) {
+          border-left: 0;
+        }
+        &-text {
+          display: flex;
+          align-items: center;
+          padding: $base-padding * 1.25 0 $base-padding * 1.25 $base-padding * 1;
+          height: 60px;
+          font-size: $base-font-size * 1.125;
+          font-weight: 400;
+          line-height: 1.5;
+          color: $color-primary-light;
+          text-align: center;
+          white-space: nowrap;
+          background-color: $color-white;
+          border: 1px solid $color-primary-lightest;
+          border-right: 0;
+          border-radius: $base-border-radius;
+        }
+      }
+      button {
+        margin-top: $base-margin * 2;
+        font-weight: $bold-font-weight;
+        span {
+          font-weight: $bold-font-weight;
+        }
+        &:hover {
+          span {
+            color: $color-white;
+          }
+        }
+        svg {
+          margin-right: 5px;
+        }
+      }
+    }
+    &-address {
+      padding-left: $base-padding * 3.375;
+      @include media-breakpoint-down-xl {
+        padding-left: $base-padding * 2.5;
+      }
+      @include media-breakpoint-down-lg {
+        padding: 0;
+      }
+      h6 {
+        font-weight: $semiBold-font-weight;
+        font-size: $base-font-size * 1.25;
+        line-height: 1.4;
+        margin-bottom: $base-margin * 0.25;
+        color: $color-header;
+      }
+      p {
+        font-weight: $semiBold-font-weight;
+        font-size: $base-font-size * 1.125;
+        line-height: 1.8;
+        margin-bottom: $base-margin;
+        color: $color-text;
+      }
+      a {
+        font-weight: $semiBold-font-weight;
+        font-size: $base-font-size * 1.125;
+        line-height: 1.8;
+        margin-bottom: $base-margin * 0.25;
+        color: $color-header;
+        svg {
+          margin-right: $base-margin;
+        }
+      }
+    }
+  }
+}
+
+.form-control {
+  border: 1px solid $color-primary-lightest;
+  background: $color-white;
+  border-radius: $base-border-radius;
+  height: 60px;
+  color: $color-primary-lighter;
+  font-size: $base-font-size * 1.125;
+  font-weight: $semiBold-font-weight;
+  line-height: 1.8;
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    border: 1px solid $color-primary-lightest;
+    background: $color-white;
+    border-radius: $base-border-radius;
+    color: $color-primary-lighter;
+    &::-webkit-input-placeholder {
+      /* Edge */
+      color: $color-primary;
+    }
+
+    &:-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: $color-primary;
+    }
+
+    &::placeholder {
+      color: $color-primary;
+    }
+  }
+  &::-webkit-input-placeholder {
+    /* Edge */
+    color: $color-primary;
+  }
+
+  &:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: $color-primary-lighter;
+  }
+
+  &::placeholder {
+    color: $color-primary-lighter;
+  }
+}
+textarea.form-control {
+  height: 150px;
+  padding-left: $base-padding * 2;
+}

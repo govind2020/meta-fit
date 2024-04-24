@@ -1,0 +1,52 @@
+/********** 
+ 7. Counter Up Section Styles
+**********/
+.counter {
+  margin-bottom: $base-margin * 6.25;
+  background: $color-lighter;
+  &--container {
+    justify-content: space-between;
+    @include media-breakpoint-down-lg {
+      flex-wrap: wrap;
+      text-align: center;
+    }
+    @include media-breakpoint-down-md {
+      flex-direction: column;
+    }
+  }
+  &--content {
+    padding: $base-padding * 3.125 0;
+    @include media-breakpoint-down-lg {
+      flex-basis: 50%;
+    }
+    @include media-breakpoint-down-md {
+      padding: $base-padding * 3.125 0 $base-padding * 2;
+      flex-basis: 100%;
+      &:last-child {
+        padding: $base-padding * 3.125 0;
+      }
+    }
+    &-icon {
+      background: $color-white;
+      width: 60px;
+      height: 60px;
+      position: relative;
+      border-radius: 100%;
+      box-shadow: $medium-box-shadow;
+      margin-bottom: $base-margin * 1.125;
+      @include media-breakpoint-down-lg {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    h2 {
+      margin-bottom: $base-margin * 0.875;
+    }
+  }
+}

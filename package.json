@@ -1,0 +1,43 @@
+{
+  "name": "meta-fit",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prepare": "husky",
+    "prettier": "prettier --check '**/**/*.{js,jsx,ts,tsx,css}'",
+    "prettier:fix": "prettier --write '**/**/*.{js,jsx,ts,tsx,css}'"
+  },
+  "dependencies": {
+    "@types/bootstrap": "^5.2.10",
+    "@types/react-scroll": "^1.8.10",
+    "@types/react-slick": "^0.23.13",
+    "bootstrap": "^5.3.3",
+    "framer-motion": "^11.1.7",
+    "gray-matter": "^4.0.3",
+    "next": "14.2.2",
+    "node-sass": "^9.0.0",
+    "phosphor-react": "^1.4.1",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-markdown": "^9.0.1",
+    "react-scroll": "^1.9.0",
+    "react-slick": "^0.30.2",
+    "remark-gfm": "^4.0.0",
+    "sass": "^1.75.0",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.2",
+    "husky": "^9.0.11",
+    "prettier": "3.2.5",
+    "typescript": "^5"
+  }
+}

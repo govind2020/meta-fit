@@ -1,0 +1,17 @@
+/********** 
+23.  Privacy Page Styles
+**********/
+.privacy {
+  background: #f9fdff;
+  padding-top: $base-padding * 9.25;
+  padding-bottom: $base-padding * 5;
+  &-content {
+    max-width: 1050px;
+  }
+  &-rules {
+    margin-top: $base-margin * 2.5;
+    h5 {
+      margin-bottom: $base-margin * 1.5;
+    }
+  }
+}

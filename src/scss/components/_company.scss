@@ -1,0 +1,146 @@
+/********** 
+ 15. Company Page Styles
+**********/
+.company {
+  padding-top: $base-margin * 9.25;
+  padding-bottom: $base-margin * 9.25;
+  border-top: 1px solid #e8eef1;
+  border-bottom: 1px solid #e8eef1;
+  @include media-breakpoint-down-md {
+    padding-top: $base-margin * 3.75;
+    padding-bottom: $base-margin * 3.75;
+    border-top: none;
+  }
+  &-history {
+    margin-bottom: $base-margin * 9.375;
+    @include media-breakpoint-down-md {
+      margin-bottom: $base-margin * 3.75;
+    }
+    &--header {
+      max-width: 455px;
+      margin-bottom: $base-margin * 3.875;
+      h3 {
+        margin-bottom: $base-margin * 1.25;
+      }
+    }
+    &--list {
+      list-style: none;
+      counter-reset: my-awesome-counter;
+      li {
+        counter-increment: my-awesome-counter;
+        position: relative;
+        &::before {
+          position: absolute;
+          content: counter(my-awesome-counter);
+          font-weight: $bold-font-weight;
+          font-size: $base-font-size * 1.375;
+          margin-right: 0.5rem;
+          line-height: 1;
+          left: -40px;
+          top: 0;
+          border: 1px solid $color-primary;
+          border-radius: 100%;
+          width: 35px;
+          height: 35px;
+          text-align: center;
+          padding-top: 5px;
+        }
+        &:last-child {
+          .company-history--details {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    &--details {
+      max-width: 455px;
+      margin-bottom: $base-margin * 2;
+      margin-left: $base-margin * 1.625;
+      h6 {
+        font-weight: $bold-font-weight;
+        font-size: $base-font-size * 1.375;
+        line-height: 1.4;
+        margin-bottom: $base-margin;
+      }
+    }
+    &--thumb {
+      position: relative;
+      max-width: 540px;
+      z-index: 1;
+      border-radius: $base-border-radius;
+      &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        right: -50px;
+        bottom: -50px;
+        background: #d3f1ff;
+        z-index: -1;
+        border-radius: $base-border-radius;
+        @include media-breakpoint-down-xl {
+          right: -30px;
+          bottom: -30px;
+        }
+      }
+      img {
+        width: 100%;
+        border-radius: $base-border-radius;
+      }
+      @include media-breakpoint-down-md {
+        margin-right: $base-margin * 3.125;
+        margin-bottom: $base-margin * 3.75;
+      }
+    }
+  }
+  &-vision {
+    &--thumb {
+      position: relative;
+      max-width: 540px;
+      z-index: 1;
+      border-radius: $base-border-radius;
+      margin-left: $base-margin * 3.125;
+      &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: -50px;
+        bottom: -50px;
+        background: #d3f1ff;
+        z-index: -1;
+        border-radius: $base-border-radius;
+        @include media-breakpoint-down-xl {
+          left: -30px;
+          bottom: -30px;
+        }
+      }
+      img {
+        width: 100%;
+        border-radius: $base-border-radius;
+      }
+      @include media-breakpoint-down-md {
+        margin-bottom: $base-margin * 3.75;
+      }
+    }
+    &--content {
+      max-width: 450px;
+      h3 {
+        font-size: $base-font-size * 2.25;
+        margin-bottom: $base-margin * 1.25;
+      }
+      &--author {
+        margin-top: $base-margin * 3.5;
+        h6 {
+          font-weight: $semiBold-font-weight;
+          font-size: $base-font-size * 1.25;
+          line-height: $header-line-height;
+          color: $color-header;
+        }
+        p {
+          font-weight: $semiBold-font-weight;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+/********** 
+21.  404 Page Styles
+**********/
+.error {
+  height: 100vh;
+  width: 100vw;
+  &-content {
+    height: 100vh;
+    &-item {
+      h4 {
+        margin-top: $base-margin * 1.25;
+        margin-bottom: $base-margin * 1.25;
+      }
+      .btn {
+        svg {
+          transition: all 0.3s ease-in-out;
+          margin-left: 5px;
+        }
+        &:hover {
+          svg {
+            transform: translateX(5px);
+            transition: all 0.3s ease-in-out;
+          }
+        }
+      }
+
+      @include media-breakpoint-down-sm {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
