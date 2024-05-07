@@ -25,7 +25,7 @@ export default function RootLayout({ children }: any) {
       <body suppressHydrationWarning={true} className={manrope.className}>
         <Navbar />
         <main>{children}</main>
-        <Footer />
+        {/* <Footer /> */}
         <LogIn />
         <CreateAccount />
         <ForgetPassword />

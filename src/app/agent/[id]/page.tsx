@@ -1,6 +1,10 @@
 'use client';
 import Properties from '@/components/PropertyPagination';
-import { agentInformationData, propertiesData, reviewData } from '../../../../public/data/data';
+import {
+  agentInformationData,
+  propertiesData,
+  reviewData,
+} from '../../../../public/data/data';
 import { StarIcon } from '../../../../public/data/svgImages';
 import useTitle from '@/hooks/useTitle';
 import { useInView } from 'framer-motion';

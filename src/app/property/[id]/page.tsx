@@ -2,7 +2,12 @@ import PropertyPagination from '@/components/PropertyPagination';
 import PropertyMapInfo from '@/components/PropertyMapInfo';
 import PropertySlider from '@/components/PropertySlider';
 import { propertiesData } from '../../../../public/data/data';
-import { StarIcon, Arrow, PhoneIcon, EnvelopeIcon } from '../../../../public/data/svgImages';
+import {
+  StarIcon,
+  Arrow,
+  PhoneIcon,
+  EnvelopeIcon,
+} from '../../../../public/data/svgImages';
 import Image from 'next/image';
 import Link from 'next/link';
 

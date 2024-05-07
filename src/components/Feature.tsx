@@ -1,6 +1,8 @@
 'use client';
 import FeatureBottom from './FeatureBottom';
 import FeatureTop from './FeatureTop';
+import Fitness from './Fitness';
+import Nutrition from './Nutrition';
 
 const Feature = () => {
   return (
@@ -8,6 +10,8 @@ const Feature = () => {
       <div className="container">
         <FeatureTop />
         <FeatureBottom />
+        <Nutrition />
+        <Fitness />
       </div>
     </section>
   );

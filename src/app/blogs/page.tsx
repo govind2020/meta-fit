@@ -13,11 +13,13 @@ export const metadata = {
   title: 'Blogs | RealStatic',
 };
 
-const Page = ({ blogs }:any) => {
-  const categories: any = blogs?.map((blog:any) => blog.data.category) || [];
+const Page = ({ blogs }: any) => {
+  const categories: any = blogs?.map((blog: any) => blog.data.category) || [];
   // const uniqueCategories = [...new Set(categories)];
 
-  return <></> || <MainBlogArea blogCategory={categories} blogs={blogs || []} />;
+  return (
+    <></> || <MainBlogArea blogCategory={categories} blogs={blogs || []} />
+  );
 };
 
 export default Page;

@@ -1,0 +1,14 @@
+.gradient-divider {
+  background: linear-gradient(to right, #28a745, #ffc107);
+  width: 4%;
+}
+.label-container {
+  position: relative;
+  width: 4%;
+}
+.label-text {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
