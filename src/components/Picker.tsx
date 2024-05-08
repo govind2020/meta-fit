@@ -23,7 +23,7 @@ const Picker: React.FC<PickerProps> = ({
     <div className="d-flex flex-column gap-3">
       <div className="d-flex flex-column gap-2">
         <div className="d-flex align-items-center gap-3">
-          <button
+          <a
             className="btn btn-outline-primary rounded-circle p-2"
             style={{ width: '40px', height: '40px' }}
             onClick={() => {
@@ -31,9 +31,9 @@ const Picker: React.FC<PickerProps> = ({
             }}
           >
             <span>-</span>
-          </button>
+          </a>
           <div className="fs-1 fw-bold">{value}</div>
-          <button
+          <a
             className="btn btn-outline-primary rounded-circle p-2"
             style={{ width: '40px', height: '40px' }}
             onClick={() => {
@@ -41,7 +41,7 @@ const Picker: React.FC<PickerProps> = ({
             }}
           >
             <span>+</span>
-          </button>
+          </a>
         </div>
       </div>
       <input
