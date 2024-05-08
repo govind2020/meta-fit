@@ -8,7 +8,7 @@ import { Arrow } from '../../public/data/svgImages';
 interface BlogAreaProps {}
 
 const BlogArea: FC<BlogAreaProps> = () => {
-  const blogs = getMarkDownData('');
+  const blogs = getMarkDownData('/data/blogs');
 
   function getUniqueTitles(array: any[]) {
     const uniqueTitles: any[] = [];

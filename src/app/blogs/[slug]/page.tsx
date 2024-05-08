@@ -13,7 +13,7 @@ interface SingleBlogProps {
 }
 
 const SingleBlog: React.FC<SingleBlogProps> = (props) => {
-  const folder: string = '';
+  const folder: string = '/data/blogs/';
   const slug: string = props.params.slug;
   const blogs: any[] = getMarkDownData(folder);
   const { content, data } = getMarkDownContent(folder, slug);

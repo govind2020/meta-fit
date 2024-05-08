@@ -2,7 +2,7 @@ import getMarkDownData from '@/utils/getMarkDownData';
 import MainBlogArea from '@/components/MainBlogArea';
 
 export const generateStaticParams = async () => {
-  const posts = getMarkDownData('') || [];
+  const posts = getMarkDownData('/data/blogs/') || [];
   return posts.map((post: any) => ({
     // Adjust the type 'any' to match your blog data type
     slug: post.slug,

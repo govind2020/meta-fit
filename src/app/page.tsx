@@ -20,7 +20,7 @@ export default function Home() {
       <PropertiesArea />
       <Feature />
       <Testimonial />
-      <BlogArea />
+      {/* <BlogArea /> */}
     </>
   );
 }
