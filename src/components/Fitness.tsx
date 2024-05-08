@@ -26,7 +26,6 @@ const Fitness = () => {
           <Image
             height={589}
             width={537}
-            // src="/images/feature/feature5.png"
             src={fitnessImage}
             alt="feature5"
             style={{

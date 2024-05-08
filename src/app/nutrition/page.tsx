@@ -1,13 +1,11 @@
 'use client';
 
-import BlogArea from '@/components/BlogArea';
-import Company from '@/components/Company';
-import Counter from '@/components/Counter';
+import React, { useState, Suspense } from 'react';
 import AboutHero from '@/components/AboutHero';
-import Team from '@/components/Team';
-import React, { useState } from 'react'; // Import React
 import Picker from '@/components/Picker';
+// @ts-ignore
 import { useRouter } from 'next/navigation';
+import NotFound from '../not-found';
 
 interface Metadata {
   title: string;
@@ -63,7 +61,15 @@ const NutritionPage: React.FC = () => {
       .then((data) => {
         console.log('Submitted Successfully:', data);
         setNewId(data?.id);
-        router.push(`/nutrition/nutritionData?id=${data?.id}`);
+        if (!data && !data?.id) {
+          <NotFound />;
+        } else {
+          // <Suspense>
+          router.push(`/nutrition/nutritionData?id=${data?.id}`);
+          {
+            /* </Suspense> */
+          }
+        }
       })
       .catch((error) => {
         console.error('Failed to submit:', error);
@@ -191,7 +197,7 @@ const NutritionPage: React.FC = () => {
                 Math.max(0, myanswers.water_drinking - 1),
               )
             }
-            onSlide={(value) => updateAnswer('water_drinking', value)}
+            onSlide={(value: any) => updateAnswer('water_drinking', value)}
           />
         </div>
         <div>

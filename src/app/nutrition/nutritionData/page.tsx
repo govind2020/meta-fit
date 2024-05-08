@@ -1,7 +1,8 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 'use client';
+import { useEffect, useState, Suspense } from 'react';
+// @ts-ignore
 import { useSearchParams } from 'next/navigation';
-import { useEffect, useState } from 'react';
 
 const dietInfo = [
   {
@@ -51,7 +52,15 @@ const dietInfo = [
   },
 ];
 
-const page = () => {
+export default function NutritionPageComponent() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <NutritionPage />
+    </Suspense>
+  );
+}
+
+function NutritionPage() {
   const searchParams = useSearchParams();
   const [data, setData] = useState<any>(null);
   const [dietDetails, setDietDetails] = useState('');
@@ -150,6 +159,4 @@ const page = () => {
       </div>
     </div>
   );
-};
-
-export default page;
+}

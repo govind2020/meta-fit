@@ -1,11 +1,13 @@
 /* eslint-disable react-hooks/rules-of-hooks */
+
 'use client';
 
+import { useState } from 'react';
+// @ts-ignore
+import { useRouter } from 'next/navigation';
 import AboutHero from '@/components/AboutHero';
 import Picker from '@/components/Picker';
-import Link from 'next/link';
-import { useState } from 'react';
-import { useRouter } from 'next/navigation';
+import NotFound from '../not-found';
 
 const fitnessData = {
   id: 'BasicInfoCard',
@@ -48,7 +50,7 @@ const page = () => {
   };
 
   const updateAnswer = (field: keyof typeof myanswers, value: any) => {
-    setMyAnswers((prev) => ({
+    setMyAnswers((prev: any) => ({
       ...prev,
       [field]: value,
     }));
@@ -71,7 +73,11 @@ const page = () => {
       .then((data) => {
         console.log('Submitted Successfully:', data);
         setNewId(data?.id);
-        router.push(`/fitness/fitnessData?id=${data?.id}`);
+        if (!data && !data?.id) {
+          <NotFound />;
+        } else {
+          router.push(`/fitness/fitnessData?id=${data?.id}`);
+        }
       })
       .catch((error) => {
         console.error('Failed to submit:', error);
@@ -127,7 +133,7 @@ const page = () => {
               onRemove={() =>
                 updateAnswer('age', Math.max(0, myanswers.age - 1))
               }
-              onSlide={(value) => updateAnswer('age', value)}
+              onSlide={(value: any) => updateAnswer('age', value)}
             />
           </div>
           <div>
@@ -213,7 +219,7 @@ const page = () => {
               onRemove={() =>
                 updateAnswer('waist', Math.max(0, myanswers.waist - 1))
               }
-              onSlide={(value) => updateAnswer('waist', value)}
+              onSlide={(value: any) => updateAnswer('waist', value)}
             />
           </div>
           <div className="my-4">
@@ -227,7 +233,7 @@ const page = () => {
               onRemove={() =>
                 updateAnswer('hip', Math.max(0, myanswers.hip - 1))
               }
-              onSlide={(value) => updateAnswer('hip', value)}
+              onSlide={(value: any) => updateAnswer('hip', value)}
             />
           </div>
           <div>
@@ -242,7 +248,6 @@ const page = () => {
               id="burn_fats"
               value="burn_fats"
               onChange={handleFitnessFoalChange}
-              // onChange={(e) => updateAnswer('fitness_goal' , value)}
               autoComplete="off"
             />
             <label className="btn btn-outline-primary" htmlFor="burn_fats">
@@ -269,7 +274,6 @@ const page = () => {
               id="build_muscle"
               value="build_muscle"
               onChange={handleFitnessFoalChange}
-              // onChange={(e) => updateAnswer('fitness_goal', e.target.value)}
               autoComplete="off"
             />
             <label className="btn btn-outline-primary" htmlFor="build_muscle">
@@ -296,12 +300,11 @@ const page = () => {
                   Math.max(0, myanswers.workout_days - 1),
                 )
               }
-              onSlide={(value) => updateAnswer('workout_days', value)}
+              onSlide={(value: any) => updateAnswer('workout_days', value)}
             />
           </div>
 
           <div>
-            {/* <Link href={`/fitness/fitnessData?id=${data?.id}`}> */}
             <button
               className="btn btn-primary"
               type="button"
@@ -309,7 +312,6 @@ const page = () => {
             >
               Submit
             </button>
-            {/* </Link> */}
           </div>
         </form>
       </div>

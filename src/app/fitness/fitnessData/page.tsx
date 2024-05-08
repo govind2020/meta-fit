@@ -1,15 +1,26 @@
 /* eslint-disable react-hooks/rules-of-hooks */
+
 'use client';
+
+import { useEffect, useState, Suspense } from 'react';
+// @ts-ignore
+import { useSearchParams } from 'next/navigation';
 import CardiovascularWorkout from '@/utils/cardiovascular_workout';
 import getBMI from '@/utils/caulculators/bmi';
 import calculateCalories from '@/utils/caulculators/calorise';
 import getCompositionData from '@/utils/caulculators/composition';
 import FatWorkout from '@/utils/fat_workout';
 import MuscleWorkout from '@/utils/muscle_workout';
-import { useSearchParams } from 'next/navigation';
-import { useEffect, useState } from 'react';
 
-const page = () => {
+export default function FitnessPageComponent() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <FitnessPage />
+    </Suspense>
+  );
+}
+
+function FitnessPage() {
   const searchParams = useSearchParams();
   const [data, setData] = useState<any>(null);
   const [dietDetails, setDietDetails] = useState('');
@@ -27,7 +38,6 @@ const page = () => {
       })
       .then((result) => {
         const filteredData = result.find((item: any) => item.id == search);
-        console.log('filteredData==>', filteredData);
         setData(filteredData);
         setDietDetails(filteredData.current_diet);
       })
@@ -35,7 +45,6 @@ const page = () => {
         console.error('Error fetching data:', error);
       });
   }, [search]);
-  console.log('setData==>', data);
 
   // bmi
   const { bmi, healthy, overweight, status, underweight, ideal_weight } =
@@ -70,9 +79,6 @@ const page = () => {
     ideal_weight,
     workout_days: data?.workout_days || 2,
   });
-
-  console.log('data.overview?.workout_days', data?.workout_days);
-  console.log('fitness goal', data?.fitness_goal);
 
   return (
     <div className="container">
@@ -349,6 +355,4 @@ const page = () => {
       </div>
     </div>
   );
-};
-
-export default page;
+}
