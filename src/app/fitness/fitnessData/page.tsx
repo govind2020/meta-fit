@@ -52,7 +52,7 @@ function FitnessPage() {
       height: data?.height,
       weight: data?.weight,
       gender: data?.gender,
-      fitness_goal: data?.fitness_goal,
+      fitness_goal: data?.fitness_goal || 'build_muscle',
     });
 
   // composition
@@ -65,7 +65,7 @@ function FitnessPage() {
     is_fat_accurate: data?.is_fat_accurate ?? null,
     neck: data?.neck,
     waist: data?.waist,
-    fitness_goal: data?.fitness_goal,
+    fitness_goal: data?.fitness_goal || 'build_muscle',
   });
 
   // calories
@@ -343,9 +343,12 @@ function FitnessPage() {
           </p>
         </div>
         {/* workout */}
-        {data?.fitness_goal === 'build_muscle' && (
+        {/* {data?.fitness_goal === 'build_muscle' && (
           <MuscleWorkout workout_days={data?.workout_days} />
-        )}
+        )} */}
+
+        <MuscleWorkout workout_days={data?.workout_days} />
+
         {data?.fitness_goal === 'cardiovascular' && (
           <CardiovascularWorkout workout_days={data?.workout_days} />
         )}
