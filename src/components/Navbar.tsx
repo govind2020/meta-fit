@@ -32,7 +32,10 @@ const Navbar = () => {
   }, []);
   return (
     <header>
-      <nav className="navbar navbar-expand-lg navbar-white" id="navigationBar">
+      <nav
+        className="navbar navbar-expand-lg navbar-white top-0"
+        id="navigationBar"
+      >
         <div className="container-fluid navbar-container">
           <div className="d-flex align-items-center">
             <Link className="navbar-brand" href="/">

@@ -93,7 +93,6 @@ const page = () => {
           <h1>{fitnessData?.title}</h1>
           <p>{fitnessData?.description}</p>
         </div>
-
         <form className="contact-form-items">
           <div className="input-group mx-1">
             <input

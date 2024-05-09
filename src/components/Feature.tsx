@@ -3,6 +3,7 @@ import FeatureBottom from './FeatureBottom';
 import FeatureTop from './FeatureTop';
 import Fitness from './Fitness';
 import Nutrition from './Nutrition';
+import SweatySwip from './SweatySwip';
 
 const Feature = () => {
   return (
@@ -12,6 +13,7 @@ const Feature = () => {
         <FeatureBottom />
         <Nutrition />
         <Fitness />
+        <SweatySwip />
       </div>
     </section>
   );
