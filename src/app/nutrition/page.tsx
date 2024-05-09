@@ -79,14 +79,18 @@ const NutritionPage: React.FC = () => {
 
   return (
     <>
-      <AboutHero />
-      <form className="contact-form-items px-5">
-        <div className="input-group mx-1">
+      {/* <AboutHero /> */}
+      <div className="text-center">
+        <h1>{nutritiondata?.title}</h1>
+        <p>{nutritiondata?.description}</p>
+      </div>
+      <form className="contact-form-items px-5 mt-5 pt-5">
+        <div className="input-group mx-1 mt-5">
           <input
             type="text"
             name="name"
             onChange={(e) => updateAnswer('name', e.target.value)}
-            className="form-control"
+            className="form-control mt-5"
             placeholder="Full Name"
           />
         </div>

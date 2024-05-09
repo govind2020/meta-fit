@@ -86,15 +86,15 @@ const page = () => {
   };
 
   return (
-    <div>
-      <AboutHero />
-      <div className="px-5">
+    <div className="px-5 mt-5 pt-5">
+      {/* <AboutHero /> */}
+      <div className="px-5 mt-5 pt-5">
         <div className="text-center">
           <h1>{fitnessData?.title}</h1>
           <p>{fitnessData?.description}</p>
         </div>
 
-        <form className="contact-form-items px-5">
+        <form className="contact-form-items">
           <div className="input-group mx-1">
             <input
               type="text"
@@ -306,7 +306,7 @@ const page = () => {
 
           <div>
             <button
-              className="btn btn-primary"
+              className="btn btn-primary my-2"
               type="button"
               onClick={logAnswers}
             >
