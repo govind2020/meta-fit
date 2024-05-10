@@ -35,7 +35,7 @@ const SwipeCard = ({ data, active, removeCard, dataFromJson }: any) => {
       {active ? (
         <motion.div
           drag={true}
-          className="card position-absolute top-50 start-50 translate-middle text-center fs-1 fw-bold border border-2 border-dark"
+          className="card position-absolute top-50 start-50 translate-middle text-center fs-1 fw-bold border "
           onDragEnd={onDragEnd}
           initial={{ scale: 0.95, opacity: 0.5 }}
           animate={{
@@ -53,14 +53,14 @@ const SwipeCard = ({ data, active, removeCard, dataFromJson }: any) => {
               src={data?.src?.src}
               fill
               alt="home"
-              className="rounded-3 position-static"
+              className="rounded-top position-static"
               style={{
                 objectFit: 'cover',
               }}
             />
-            <div className="card-body">
-              <h5 className="card-title">{data?.name}</h5>
-              <p className="card-text">{data?.age}</p>
+            <div className="card-body border border-2 border-dark bg-secondary rounded-bottom">
+              <h5 className="card-title text-white ">{data?.name}</h5>
+              <p className="card-text text-white">{data?.age}</p>
             </div>
           </div>
         </motion.div>
