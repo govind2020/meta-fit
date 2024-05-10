@@ -119,7 +119,9 @@ const MainPropertyArea: React.FC<MainPropertyAreaProps> = ({
 
   return (
     <section className="filter">
-      {/* <PropertyFilter propertyFilterFunctionality={propertyFilterFunctionality} /> */}
+      <PropertyFilter
+        propertyFilterFunctionality={propertyFilterFunctionality}
+      />
       <div className="container">
         <div className="listing">
           <PropertyPagination

@@ -5,6 +5,7 @@ import {
   AreaIcon,
   BathIcon,
   BedIcon,
+  ChatIcon,
   Location,
   PropertyTypeIcon,
 } from '../../public/data/svgImages';
@@ -12,24 +13,26 @@ import {
 interface PropertyCardProps {
   location?: string;
   bed?: number;
-  bath?: number;
+  bath?: string;
   area?: number;
   type?: string;
   price?: number;
   coverImg?: string;
   title?: string;
+  faclity?: string;
   id?: string | number;
 }
 
 const PropertyCard: React.FC<PropertyCardProps> = ({
   location,
   bed,
-  bath,
+  bath = '',
   area,
   type,
   price = '',
   coverImg = '',
   title = '',
+  faclity = '',
   id,
 }) => {
   return (
@@ -50,7 +53,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
           width={384}
           src={coverImg}
           alt={title}
-          style={{ maxWidth: '100%', height: 'auto' }}
+          style={{ maxWidth: '100%' }}
         />
       </motion.div>
       <motion.div className="properties-card--content">
@@ -65,16 +68,16 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
         </motion.div>
         <motion.ul className="list-unstyled properties-card--content--features">
           <motion.li className="d-flex align-items-center">
-            <BedIcon />
-            <span>{bed} Bed Room</span>
+            <ChatIcon />
+            <span>Online Chat</span>
           </motion.li>
           <motion.li className="d-flex align-items-center">
             <BathIcon />
-            <span>{bath} Bath</span>
+            <span>{bath}</span>
           </motion.li>
           <motion.li className="d-flex align-items-center">
             <AreaIcon />
-            <span>{area} sqft</span>
+            <span>{faclity}</span>
           </motion.li>
           <motion.li className="d-flex align-items-center">
             <PropertyTypeIcon />
@@ -85,7 +88,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
           <Link href={`/property/${id}`} passHref>
             <span className="btn btn-small">View Details</span>
           </Link>
-          <h5>${price.toLocaleString()}</h5>
+          <h5>₹{price.toLocaleString()}</h5>
         </motion.div>
       </motion.div>
     </motion.div>

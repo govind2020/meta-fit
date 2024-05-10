@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import PropertyCard from './PropertyCard';
 import Pagination from './Pagination';
 import { AnimatePresence } from 'framer-motion';
-import { propertiesData } from '../../public/data/data';
+import { propertiesData, GymData } from '../../public/data/data';
 
 interface PropertyData {
   [key: string]: any;
@@ -57,7 +57,7 @@ const PropertyPagination: React.FC<PropertyPaginationProps> = ({
             <PropertyCard
               location={''}
               bed={0}
-              bath={0}
+              bath={''}
               area={0}
               type={''}
               price={0}
@@ -69,8 +69,7 @@ const PropertyPagination: React.FC<PropertyPaginationProps> = ({
             />
           ))}
         {category &&
-          propertiesData
-            .filter((item) => item.category.includes(category))
+          GymData.filter((item) => item.category.includes(category))
             .slice(0, limit)
             .map((property) => (
               <AnimatePresence key={property.id}>

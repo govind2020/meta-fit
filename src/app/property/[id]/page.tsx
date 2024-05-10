@@ -1,7 +1,7 @@
 import PropertyPagination from '@/components/PropertyPagination';
 import PropertyMapInfo from '@/components/PropertyMapInfo';
 import PropertySlider from '@/components/PropertySlider';
-import { propertiesData } from '../../../../public/data/data';
+import { propertiesData, GymData } from '../../../../public/data/data';
 import {
   StarIcon,
   Arrow,
@@ -10,13 +10,14 @@ import {
 } from '../../../../public/data/svgImages';
 import Image from 'next/image';
 import Link from 'next/link';
+import Dropdown from '@/components/DropDown';
 
 export const metadata: { title: string } = {
-  title: 'Property Details | RealStatic',
+  title: 'GYM Details | GYM',
 };
 
 export const generateStaticParams = async (): Promise<{ id: string }[]> => {
-  return propertiesData.map((properties) => ({
+  return GymData.map((properties) => ({
     id: properties.id.toString(),
   }));
 };
@@ -59,8 +60,8 @@ interface PageParams {
   id: string;
 }
 
-const page = ({ params }: { params: PageParams }): JSX.Element => {
-  const property: PropertyDetails | any = propertiesData.find(
+const Page = ({ params }: { params: PageParams }): JSX.Element => {
+  const property: PropertyDetails | any = GymData.find(
     (property) => property.id === +params.id,
   );
 
@@ -96,7 +97,7 @@ const page = ({ params }: { params: PageParams }): JSX.Element => {
                   />
                   <label className="property-price-payment" htmlFor="option1">
                     <span className="price">
-                      ${property.price.toLocaleString()}
+                      ₹{property.price.toLocaleString()}
                     </span>
                     <span className="time-period">Online / Cash Payment</span>
                   </label>
@@ -110,11 +111,14 @@ const page = ({ params }: { params: PageParams }): JSX.Element => {
                   />
                   <label className="property-price-payment" htmlFor="option2">
                     <span className="price">
-                      ${property.monthlyPayment.toLocaleString()} / month
+                      ₹{property.monthlyPayment.toLocaleString()} / month
                     </span>
                     <span className="time-period">0% EMI for 6 Months</span>
                   </label>
                 </div>
+                {/* drop down start */}
+                <Dropdown />
+                {/* drop down end */}
               </div>
               <div className="property-details-content-details">
                 <p className="bold">{property.details.title}</p>
@@ -123,7 +127,7 @@ const page = ({ params }: { params: PageParams }): JSX.Element => {
               <PropertyMapInfo />
             </div>
             <div className="property-details-highlights">
-              <h4>Home Highlights</h4>
+              <h4>GYM Highlights</h4>
               <div className="row">
                 <div className="col-sm-6">
                   <dl className="row">
@@ -160,7 +164,7 @@ const page = ({ params }: { params: PageParams }): JSX.Element => {
               </div>
             </div>
             <div className="property-details-agent">
-              <h4>Agent Information</h4>
+              <h4>GYM Owner Information</h4>
               <div className="property-details-agent-content d-flex align-items-center">
                 <div className="property-details-agent-content-thumb">
                   <Image
@@ -274,7 +278,7 @@ const page = ({ params }: { params: PageParams }): JSX.Element => {
         <div className="row">
           <div className="col-12 mt-5 mb-4">
             <div className="d-flex align-items-center justify-content-between properties-header">
-              <h3>Featured Properties</h3>
+              <h3>Other GYM Options</h3>
               <Link
                 href="/property"
                 className="d-md-flex align-items-center d-none"
@@ -286,7 +290,7 @@ const page = ({ params }: { params: PageParams }): JSX.Element => {
           </div>
           <div className="col-12">
             <PropertyPagination
-              property={propertiesData}
+              property={GymData}
               showPagination={false}
               category={undefined}
             />
@@ -297,4 +301,4 @@ const page = ({ params }: { params: PageParams }): JSX.Element => {
   );
 };
 
-export default page;
+export default Page;

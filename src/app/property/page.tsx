@@ -1,12 +1,18 @@
 import MainPropertyArea from '@/components/MainPropertyArea';
-import { propertiesData } from '../../../public/data/data';
+import { propertiesData, GymData } from '../../../public/data/data';
 
 export const metadata = {
   title: 'Property List | RealStatic',
 };
 
 const Page = () => {
-  return <></> || <MainPropertyArea propertiesData={propertiesData} />;
+  return (
+    (
+      <>
+        <MainPropertyArea propertiesData={GymData} />
+      </>
+    ) || <MainPropertyArea propertiesData={GymData} />
+  );
 };
 
 export default Page;

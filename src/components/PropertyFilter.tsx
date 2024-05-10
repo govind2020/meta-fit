@@ -1,5 +1,6 @@
 'use client';
 import { CaretDown, MagnifyingGlass } from 'phosphor-react';
+import { GymData, gymCategory } from '../../public/data/data';
 const PropertyFilter = ({ propertyFilterFunctionality }: any) => {
   const {
     propertiesData,
@@ -15,11 +16,12 @@ const PropertyFilter = ({ propertyFilterFunctionality }: any) => {
     handleType,
     handleReset,
   } = propertyFilterFunctionality;
+
   return (
     <div className="container">
       <div className="row">
         <div className="filter-title">
-          <h3>Find Property</h3>
+          <h3>Find By Location</h3>
         </div>
         <div className="filter-content">
           <div className="filter-content-properties d-flex align-items-center">
@@ -27,7 +29,7 @@ const PropertyFilter = ({ propertyFilterFunctionality }: any) => {
               <input
                 type="text"
                 className="form-control"
-                placeholder="Enter State Address"
+                placeholder="Enter GYM Name"
                 value={search}
                 onChange={handleSearch}
               />
@@ -44,7 +46,6 @@ const PropertyFilter = ({ propertyFilterFunctionality }: any) => {
                   }`}
                 >
                   <p className="btn btn-large btn-outline d-flex align-items-center">
-                    {selectedType && <span>{selectedType}</span>}
                     <span className="dummyItem">Type</span>
                     <span>
                       <CaretDown size={20} weight="bold" />
@@ -52,8 +53,8 @@ const PropertyFilter = ({ propertyFilterFunctionality }: any) => {
                   </p>
                 </div>
                 <ul className="dropdownMenu">
-                  {/* {[...new Set(propertiesData.map((item) => item.type))].map((type) => ( */}
-                  {propertiesData?.map((item: any) => (
+                  {/* {[...new Set(GymData.map((item) => item.type))].map((type) => ( */}
+                  {gymCategory?.map((item: any) => (
                     <li key={item.type} onClick={() => handleType(type)}>
                       {item.type}
                     </li>
@@ -61,7 +62,7 @@ const PropertyFilter = ({ propertyFilterFunctionality }: any) => {
                 </ul>
               </div>
             </div>
-            <div className="filter-bed">
+            {/* <div className="filter-bed">
               <div className="dropholder">
                 <div
                   onClick={() => setBed(!bed)}
@@ -71,7 +72,7 @@ const PropertyFilter = ({ propertyFilterFunctionality }: any) => {
                 >
                   <p className="btn btn-large btn-outline">
                     {selectedBed && <span>{selectedBed}</span>}
-                    <span className="dummyItem">Bed-3</span>
+                    <span className="dummyItem">Feature</span>
                     <span>
                       <CaretDown size={20} weight="bold" />
                     </span>
@@ -83,7 +84,7 @@ const PropertyFilter = ({ propertyFilterFunctionality }: any) => {
                   <li onClick={() => handleBed('Bed-4')}>Bed-4</li>
                 </ul>
               </div>
-            </div>
+            </div> */}
             <button
               onClick={handleReset}
               className="btn btn-large close-filter-content"

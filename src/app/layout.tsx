@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import LogIn from '@/components/Login';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
 import '@/scss/theme.scss';
 import CreateAccount from '@/components/CreateAccount';
 import ForgetPassword from '@/components/ForgetPassword';
