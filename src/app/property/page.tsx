@@ -2,10 +2,10 @@ import MainPropertyArea from '@/components/MainPropertyArea';
 import { propertiesData, GymData } from '../../../public/data/data';
 
 export const metadata = {
-  title: 'Property List | RealStatic',
+  title: 'GYM Details | GYM',
 };
 
-const Page = () => {
+const PropertyPage = () => {
   return (
     (
       <>
@@ -15,4 +15,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default PropertyPage;

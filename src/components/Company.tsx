@@ -69,9 +69,7 @@ const Company: React.FC<CompanyProps> = () => {
                 </li>
                 <li>
                   <div className="company-history--details">
-                    <h6>
-                      RealStatic holds its initial public offering in 2008
-                    </h6>
+                    <h6>MetaFit holds its initial public offering in 2008</h6>
                     <p>
                       Lorem Ipsum is simply dummy text of the printing and
                       typesetting industry. In a free hour, On the other hand,

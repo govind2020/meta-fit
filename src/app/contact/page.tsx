@@ -5,7 +5,7 @@ import { EnvelopeSimpleOpen, Phone, User } from 'phosphor-react';
 import { socialMediaData } from '../../../public/data/data';
 
 const Contact: FC = () => {
-  useTitle('Contact Us | RealStatic');
+  useTitle('Contact Us | MetaFit');
   return (
     <section className="contact">
       <div className="container">

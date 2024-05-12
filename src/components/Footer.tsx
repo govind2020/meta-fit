@@ -203,7 +203,7 @@ const Footer = () => {
           <div className="row">
             <div className="offset-1 col-11">
               <p className="footer-copyright">
-                RealStatic Limited © {new Date().getFullYear()}
+                MetaFit Limited © {new Date().getFullYear()}
               </p>
             </div>
           </div>
@@ -246,7 +246,7 @@ const Footer = () => {
                     ))}
                   </ul>
                   <p className="footer-copyright">
-                    RealStatic Limited © {new Date().getFullYear()}
+                    MetaFit Limited © {new Date().getFullYear()}
                   </p>
                 </div>
               </div>
@@ -610,7 +610,7 @@ const Footer = () => {
           </div>
         </div>
         <p className="footer-copyright">
-          RealStatic Limited © {new Date().getFullYear()}
+          MetaFit Limited © {new Date().getFullYear()}
         </p>
       </section>
     </>

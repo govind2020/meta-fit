@@ -1,27 +1,20 @@
-import BlogArea from '@/components/BlogArea';
-import Company from '@/components/Company';
-import Counter from '@/components/Counter';
-import AboutHero from '@/components/AboutHero';
-import Team from '@/components/Team';
 import React from 'react'; // Import React
+import AboutHero from '@/components/AboutHero';
 
 interface Metadata {
   title: string;
 }
 
 export const metadata: Metadata = {
-  title: 'About Us | RealStatic',
+  title: 'About Us | MetaFit',
 };
 
 const About: React.FC = () => {
   // Define type for the functional component
   return (
     <>
+      <h1>About Page</h1>
       <AboutHero />
-      <Counter className="bg-transparent" />
-      <Company />
-      <Team />
-      {/* <BlogArea /> */}
     </>
   );
 };

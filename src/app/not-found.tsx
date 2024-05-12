@@ -1,8 +1,8 @@
 'use client';
 import Image from 'next/image';
-import { ArrowRight } from 'phosphor-react';
+// import { ArrowRight } from 'phosphor-react';
 
-export const metadata = { title: '404 | RealStatic' };
+export const metadata = { title: '404 | MetaFit' };
 
 const NotFound = () => {
   return (
@@ -21,7 +21,7 @@ const NotFound = () => {
                 <h4>Something went wrong!</h4>
                 <a href="/" className="btn btn-small btn-outline ">
                   <span>Homepage</span>
-                  <ArrowRight size={16} weight="bold" />
+                  {/* <ArrowRight size={16} weight="bold" /> */}
                 </a>
               </div>
             </div>

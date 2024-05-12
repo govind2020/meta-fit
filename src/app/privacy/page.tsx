@@ -1,5 +1,5 @@
 export const metadata: { title: string } = {
-  title: 'Privacy & Policy | RealStatic',
+  title: 'Privacy & Policy | MetaFit',
 };
 
 const page = () => {
