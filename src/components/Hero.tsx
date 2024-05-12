@@ -59,11 +59,10 @@ const Hero = () => {
             >
               <div className="hero-content">
                 <h1 className="hero-content-title">
-                  Find a perfect property Where you&rsquo;ll love to live
+                  Find a perfect Gym Where you&rsquo;ll love to Exercise
                 </h1>
                 <p className="hero-content-description">
-                  We helps businesses customize, automate and scale up their ad
-                  production and delivery.
+                  We helps to Achieve Your Goal In Fitness.
                 </p>
               </div>
               <div className="hero-form">

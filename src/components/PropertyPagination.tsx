@@ -39,7 +39,7 @@ const PropertyPagination: React.FC<PropertyPaginationProps> = ({
   const currentPageData: PropertyData[] = paginateData();
 
   const goToNextPage = () => {
-    setCurrentPage((prevPage) => prevPage + 1);
+    setCurrentPage((prevPage: number) => prevPage + 1);
   };
 
   const paginateFunction: PaginateFunction = {
