@@ -10,7 +10,7 @@ export const generateStaticParams = async () => {
 };
 
 export const metadata = {
-  title: 'Blogs | MetaFit',
+  title: 'Blogs | RealStatic',
 };
 
 const Page = ({ blogs }: any) => {

@@ -4,13 +4,13 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import LogIn from '@/components/Login';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.min.js';
 import '@/scss/theme.scss';
 import CreateAccount from '@/components/CreateAccount';
 import ForgetPassword from '@/components/ForgetPassword';
 import Otp from '@/components/Otp';
 import NewPassword from '@/components/NewPassword';
 import Script from 'next/script';
+import { useEffect } from 'react';
 
 const manrope = Manrope({
   weight: ['200', '300', '400', '500', '600', '700', '800'],
@@ -21,6 +21,9 @@ const manrope = Manrope({
 });
 
 export default function RootLayout({ children }: any) {
+  // useEffect(() => {
+  //   require("bootstrap/dist/js/bootstrap.bundle.min.js");
+  // }, []);
   return (
     <html lang="en">
       <body suppressHydrationWarning={true} className={manrope.className}>

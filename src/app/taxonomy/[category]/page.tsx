@@ -16,7 +16,7 @@
 // };
 
 // export const metadata = {
-//   title: 'Blog Taxonomy | MetaFit',
+//   title: 'Blog Taxonomy | RealStatic',
 // };
 
 // const Page: FC<PageProps> = ({ params }) => {

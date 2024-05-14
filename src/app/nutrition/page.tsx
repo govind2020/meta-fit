@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState, Suspense } from 'react';
-import AboutHero from '@/components/AboutHero';
 import Picker from '@/components/Picker';
 // @ts-ignore
 import { useRouter } from 'next/navigation';

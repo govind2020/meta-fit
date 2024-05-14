@@ -1,4 +1,4 @@
-import { FC, Suspense } from 'react'; // Import FC type for functional components
+import { FC, Suspense } from 'react';
 import dynamic from 'next/dynamic';
 
 const MagnifyingGlass = dynamic(
@@ -10,7 +10,7 @@ const MagnifyingGlass = dynamic(
 
 const Search: FC = () => {
   // Use FC type for functional components
-  // useTitle("Search | MetaFit");
+  // useTitle("Search | RealStatic");
   return (
     <>
       <Suspense fallback={<div>Loading...</div>}>

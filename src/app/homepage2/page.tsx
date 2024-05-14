@@ -7,7 +7,7 @@ import Services from '@/components/Services';
 import TestimonialV2 from '@/components/TestimonialV2';
 
 export const metadata = {
-  title: 'Home Page 2 | MetaFit',
+  title: 'Home Page 2 | RealStatic',
 };
 
 const page = () => {

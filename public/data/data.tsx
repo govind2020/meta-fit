@@ -930,7 +930,7 @@ export const GymData = [
   },
   {
     id: 7,
-    title: 'METAFIT GYM',
+    title: 'RealStatic GYM',
     location: '321 Maple St, City, State 98765',
     bed: 4,
     bath: 'Steam bath',

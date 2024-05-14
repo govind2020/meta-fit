@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const metadata: { title: string } = {
-  title: 'License | MetaFit',
+  title: 'License | RealStatic',
 };
 
 const page = () => {

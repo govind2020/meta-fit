@@ -1,6 +1,5 @@
 'use client';
 
-import AboutHero from '@/components/AboutHero';
 import { AnimatePresence } from 'framer-motion';
 import { Suspense, useEffect, useState } from 'react';
 import { cardData } from '@/utils/cardData';
@@ -56,7 +55,7 @@ const Page = () => {
         <div className="top-50">
           {/* <AboutHero /> */}
           <div className="px-5">
-            <div className="d-flex  align-items-center justify-content-center text-secondary">
+            {/* <div className="d-flex  align-items-center justify-content-center text-secondary">
               <AnimatePresence>
                 {cards.length
                   ? cards.map((card) => (
@@ -114,7 +113,7 @@ const Page = () => {
                       </div>
                     )}
               </AnimatePresence>
-            </div>
+            </div> */}
           </div>
         </div>
       </Suspense>

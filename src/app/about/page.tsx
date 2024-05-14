@@ -6,7 +6,7 @@ interface Metadata {
 }
 
 export const metadata: Metadata = {
-  title: 'About Us | MetaFit',
+  title: 'About Us | RealStatic',
 };
 
 const About: React.FC = () => {

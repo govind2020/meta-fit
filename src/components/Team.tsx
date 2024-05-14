@@ -15,7 +15,7 @@ const Team = () => {
         <div className="row">
           <div className="col-md-12 col-10 mx-auto">
             <div className="team-title text-center">
-              <h3>MetaFit Team members</h3>
+              <h3>RealStatic Team members</h3>
             </div>
           </div>
         </div>
